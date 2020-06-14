@@ -13,7 +13,9 @@ function oppositeDayHandler() {
   if (typeof showTheNumber !== 'boolean') { throw new TypeError(); }
 
   // perform core logic
-  const oppositeDay = _;
+  //  if they said they want to see the numbe, don't show it
+  //  if they do want to see the number, do show it
+  const oppositeDay = _; // use a logical operator to reverse the value of their input
   const message = _ ? (100 * Math.random()) : 'as you wish.  good day!';
 
   // alert result for the user
