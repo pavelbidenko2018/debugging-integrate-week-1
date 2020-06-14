@@ -16,8 +16,11 @@ function honestyTestHandler() {
   if (typeof confirmation !== 'boolean') { throw new TypeError(); }
 
   // perform core logic
-  const didEnterSomething = userString ? _ : _;
+  
+  // true if the user input text, false if it is empty or null
+  const didEnterSomething = userString ? _ : _; 
   const isALiar = confirmation === didEnterSomething;
+  // display a different message depending on whether or not the user is a liar
   const message = `You are a ${_ ? 'liar' : 'mensch'}!`;
 
   // alert result for the user
