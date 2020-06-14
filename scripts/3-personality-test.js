@@ -7,31 +7,28 @@ function personalityTestHandler() {
     debugger;
 
     // read inputs from user
-    const likesPuppies = alert(`Do you like puppies?`);
-    const eatsVegetables = alert(`Do you eat vegetables?`);
-    const sleepsEnough = alert('Do you sleep enough?');
+    const likesPuppies = confirm(`Do you like puppies?`);
+    const eatsVegetables = confirm(`Do you eat vegetables?`);
+    const sleepsEnough = confirm('Do you sleep enough?');
 
     console.log(typeof likesPuppies);
 
     // before moving on ... type check!
-    if (typeof likesPuppies !== 'Boolean') { throw new TypeError(); }
-    if (typeof eatsVegetables !== 'Boolean') { throw new TypeError(); }
-    if (typeof sleepsEnough !== 'Boolean') { throw new TypeError(); }
+    if (typeof likesPuppies !== 'boolean') { throw new TypeError(); }
+    if (typeof eatsVegetables !== 'boolean') { throw new TypeError(); }
+    if (typeof sleepsEnough !== 'boolean') { throw new TypeError(); }
 
     // perform core logic
     const isHealthy = eatsVegetables || sleepsEnough;
-    const isAGoodPerson = likesPuppies && isHeathy;
+    const isAGoodPerson = likesPuppies && isHealthy;
     const adjective = isAGoodPerson ? 'good' : 'bad';
-    const message = `You are a `
-    `${adjective}`
-    ` person`;
+    const message = `You are a ${adjective} person`;
 
     // alert result for the user
     alert(message);
 
     // log action for the developer
     console.log('\n--- personality test ---');
-    console.log('likesPuppies:', typeof likesPuppies, '\n', likesPuppies);
     console.log('likesPuppies:', typeof likesPuppies, '\n', likesPuppies);
     console.log('eatsVegetables:', typeof eatsVegetables, '\n', eatsVegetables);
     console.log('sleepsEnough:', typeof sleepsEnough, '\n', sleepsEnough);
